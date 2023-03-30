@@ -12,10 +12,10 @@
 	if($row == 1) {
 		$_SESSION['usuario'] = $usuario;
 		header('Location: agentes.php');
+		exit();
 	} else {
 		$_SESSION['nao_autenticado'] = true;
-		header('Location: index.php');
+		header('Location: ./');
 		exit();
 	}
-	
 ?>

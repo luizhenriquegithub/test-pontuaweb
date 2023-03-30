@@ -1,7 +1,7 @@
 <?php
 	
-	$localhost = true;
-	//$localhost = false;
+	//$localhost = true;
+	$localhost = false;
 	
 	if($localhost)
 	{
