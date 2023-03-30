@@ -1,5 +1,10 @@
 ># test-pontuaweb
 >Teste Desenvolvimento Pontua Web
+ 
+ </hr>
+ 
+> Essa aplicação foi criada com base e utilização na api fornecida pela Marvel
+> https://developer.marvel.com
 
 
 > :computer: Hospedagem do Teste Desenvolvimento Pontua Web
