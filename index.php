@@ -1,11 +1,13 @@
+<?php 
+	session_start();
+	header("Content-type: text/html; charset=utf-8"); 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
         <title>Pontua Web</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -32,9 +34,18 @@
 					</div>
 					<div class="col-md-1"></div>
                     <div class="col-md-5">
-							
+						
+						<?php
+							if(isset($_SESSION['nao_autenticado'])) {
+								echo "<div class='alert alert-danger' role='alert'>  
+										email ou senha esta invalido, tente novamente. 
+									 </div>										
+									 ";			
+							}
+							unset($_SESSION['nao_autenticado']);
+						?>
+
 						<div class="card shadow-2-strong" style="border-radius: 1rem;">
-						  
 							<form class="form-signin" action="login.php" method="POST">
 								</br>
 								<h1 class="h3 mb-3 font-weight-normal"><img src="img/bem-vindo.png"></h1>
@@ -47,7 +58,7 @@
 									<input type="password" name="senha" class="form-control" placeholder="Informe sua senha" required>
 									<button class="w-100 btn btn-lg btn-primary" style="background-color: #00113D;" type="submit">entrar <img src="img/vector.png"> </button>
 									</p>
-									<p class="text-right" style="color: #F21A05; font-family: 'Epilogue';"><img src="img/vector_senha.png"> Esqueceu a senha?</p>
+									<p class="text-right"><img src="img/vector_senha.png"><a href="" style="color: #F21A05; font-family: 'Epilogue';" > Esqueceu a senha?</a></p>
 							</form>						  
 						
 						</div>
